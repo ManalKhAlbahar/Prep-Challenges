@@ -61,7 +61,7 @@ const replaceWords = (str) => {
     let am = arr.indexOf('am');
     if (am !== -1)
         arr.splice(am, 1, 'are');
-    
+
     let was = arr.indexOf('was');
     if (was !== -1)
         arr.splice(was, 1, 'were');
@@ -79,7 +79,7 @@ const replaceWords = (str) => {
 const arrToStr = (arr) => {
     // write your code here
     arr.splice(5, 0, ',');
-    
+
     return arr.reduce((s, s2) => {
         if (s2 === ',')
             return s + s2;
@@ -123,7 +123,7 @@ const letterCounter = (str) => {
 
             currentLetter = nextLetter;
         }
-        
+
         result += currentLetter + count;
 
         if (i !== words.length - 1)
