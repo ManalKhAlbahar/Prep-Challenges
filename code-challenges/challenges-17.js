@@ -16,17 +16,13 @@
 
 const recursionPattern = (int1, int2) => {
     // write your code here
-    
-    let arr=[0];
-    for (let int = 0; int <int1; int++) {
-        let int =int1-int2;
-        let arr=[int];
-     
-    
-    }
-    
-   
-    return arr;
+
+    if (int1 < 0)
+        return [int1];
+
+    if (int1 > 0)
+        return [int1].concat(recursionPattern(int1 - int2, int2)).concat([int1]);
+
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -47,8 +43,8 @@ const recursionPattern = (int1, int2) => {
 const filterLinks = (str) => {
     // write your code here
     let filter = /(www.)+([\w])+(.com|.org|.net)/g;
-    let filterLinl=str.match(filter).join();
-  return filterLinl;
+    let filterLinl = str.match(filter).join();
+    return filterLinl;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -68,15 +64,7 @@ const filterLinks = (str) => {
 
 const isPalindrome = (str) => {
     // write your code here
-    let m = str.length;
-    for (let i = 0; i < m; i++) {
-        if (str.charAt(i) !== str.charAt(m - 1 - i)) {
-            return true;
-        }
-    }
-    return false;
 }
-
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
