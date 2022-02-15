@@ -100,7 +100,7 @@ const isPalindrome = (str) => {
 
 const samePattern = (str, arr) => {
     // write your code here
-  
+
     let keys = {};
     let res = true;
     for (let i = 0; i < str.length; i++) {
@@ -113,7 +113,7 @@ const samePattern = (str, arr) => {
     }
     return res;
 }
-     
+
 
 // -------------------------------------------------------------------------------------------------------
 
