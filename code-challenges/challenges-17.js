@@ -64,7 +64,19 @@ const filterLinks = (str) => {
 
 const isPalindrome = (str) => {
     // write your code here
+    let f = str.match(/([A-Za-z])\w*/g);
+    if (!f) return true;
+    str = f.join('').toLowerCase();
+    let res = true;
+    for (let i = 0; i < str.length / 2; i++) {
+        const left = str[i];
+        const right = str[str.length - 1 - i];
+        res = res && left === right;
+    }
+
+    return res;
 }
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -88,7 +100,21 @@ const isPalindrome = (str) => {
 
 const samePattern = (str, arr) => {
     // write your code here
+  
+    let keys = {};
+    let res = true;
+    for (let i = 0; i < str.length; i++) {
+        const s = str[i];
+        const a = arr[i];
+        if (!keys[a]) keys[a] = s;
+        else {
+            res = res && keys[a] === s;
+        }
+    }
+    return res;
 }
+     
+
 // -------------------------------------------------------------------------------------------------------
 
 
