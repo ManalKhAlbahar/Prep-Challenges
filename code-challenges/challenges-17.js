@@ -64,9 +64,11 @@ const filterLinks = (str) => {
 
 const isPalindrome = (str) => {
     // write your code here
+
     let f = str.match(/([A-Za-z])\w*/g);
     if (!f) return true;
     str = f.join('').toLowerCase();
+
     let res = true;
     for (let i = 0; i < str.length / 2; i++) {
         const left = str[i];
@@ -74,9 +76,12 @@ const isPalindrome = (str) => {
         res = res && left === right;
     }
 
+
     return res;
 }
 
+
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
